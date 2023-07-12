@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 0;
+            width: 100%;
+            overflow: hidden;
+            background-color: #660708;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: 000000;
+                }
+
+        .active {
+            background-color: 000000;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 0.5px;
+            background-color: 000300;
+            color: white;
+        }
+    </style>
+    <title>dashboard</title>
+</head>
+<body style="background-color: 15616d">
+    <div id="dashboard-container" style="background-color: ffffff">
+        <div id="dashboard-title">
+            <h1>London's 1854 cholera epidemic</h1>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="Documentation.html">Documentation</a></li>
+                <li><a href="https://youtu.be/axQKhZLes04">Video</a></li>
+                <li style="float:right"><a href="#about">About</a></li>
+            </ul>
+            
+        </div>
+        <div id="vis-map"></div>
+        <div id="vis-timeline-chart">
+            <div class="vis-title">Deaths Timeline</div>
+        </div>
+        <div id="vis-gender-chart">
+            <div class="vis-title">Gender Distribution</div>
+        </div>
+        <div id="vis-age-chart">
+            <div class="vis-title">Age Distribution</div>
+        </div>
+    </div>
+    <footer>
+
+        Copyright@Soumith Paritala<br>
+        <a href="sparital@iu.edu">sparital@iu.edu</a>
+
+    </footer>
+</body>
+</html>

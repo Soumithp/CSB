@@ -1,0 +1,132 @@
+/*  */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dashboard-container {
+  min-width: 1100px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 50% 20% 20%;
+  grid-template-rows: 120px 200px 200px 250px;
+  grid-template-areas:
+    "title title title"
+    "map timeline timeline"
+    "map age age"
+    "map gender .";
+  row-gap: 25px;
+  column-gap: 20px;
+}
+
+#dashboard-title {
+  grid-area: title;
+}
+
+#vis-map {
+  grid-area: map;
+  min-width: 500px;
+  max-width: 800px;
+}
+
+#vis-gender-chart {
+  grid-area: gender;
+}
+
+#vis-age-chart {
+  grid-area: age;
+}
+
+#vis-timeline-chart {
+  grid-area: timeline;
+}
+
+.vis-title {
+  font-weight: bold;
+}
+
+/* map */
+
+path.street {
+  stroke: black;
+  opacity: 0.25;
+  fill: none;
+}
+
+.landmark text {
+  font-size: 10px;
+  dominant-baseline: middle;
+  text-anchor: start;
+}
+
+.street-name {
+  font-size: 12;
+  font-weight: bold;
+  opacity: 0.5555555;
+}
+
+.dot {
+  cursor: default;
+}
+
+.dot circle {
+  fill-opacity: 0.1;
+}
+
+.dot text {
+  font-size: 8px;
+  dominant-baseline: middle;
+  text-anchor: start;
+}
+
+.legend {
+  display: flex;
+  column-gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+}
+
+.legend-symbol {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.legend-label {
+  font-size: 12px;
+}
+
+/* timeline */
+path.timeline {
+    stroke: #000000;
+    stroke-width: 2;
+    fill: #000000;
+    fill-opacity: 1.0;
+}
+
+/* pie */
+.pie text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+  fill: white;
+}
+
+/* bar */
+.bar {
+    fill: #f77f00;
+    opacity: 1.0;
+}
+
+/*  */
+.lowlight {
+  opacity: 0.1;
+}
+
+.highlight {
+  opacity: 1;
+}
